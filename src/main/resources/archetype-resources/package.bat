@@ -1,15 +1,13 @@
 @ECHO OFF
-REM Delete the folder "dist"
-rd /S  /Q .\dist
+SET JAVA_OPTS='-server -Xms512m -Xmx1024m -XX:PermSize=128m -XX:MaxPermSize=512m -XX:NewSize=192m -XX:MaxNewSize=384m -Djava.awt.headless=true -Dhttp.agent=Sakai -Dorg.apache.jasper.compiler.Parser.STRICT_QUOTE_ESCAPING=false -Dsun.lang.ClassLoader.allowArraySyntax=true' 
 
-REM call mvn clean package -Dmaven.test.skip=true
-call mvn clean package
+REM Should use the absolute path for folder release
+REM SET TOMCAT_HOME=
 
-echo Prepare distribution for sakai 11.x
-mkdir .\dist\components .\dist\webapps .\dist\lib
-copy %USERPROFILE%\.m2\repository\org\projectlombok\lombok\1.16.14\lombok-1.16.14.jar .\dist\lib
-copy .\api\target\\${artifactId}-api-${version}.jar .\dist\lib\\${artifactId}-api-0.0.1.jar
+IF "%TOMCAT_HOME%"=="" ( 
+    set /p TOMCAT_HOME="Input the path of the TOMCAT: "
+) 
 
-xcopy .\pack\target\\${artifactId}-pack-${version} .\dist\components\\${artifactId}-pack\ /S
-copy .\tool\target\\${artifactId}-tool-${version}.war .\dist\webapps\\${artifactId}-tool.war
+CALL mvn package sakai:deploy -Dmaven.tomcat.home=%TOMCAT_HOME% -Dmaven.test.skip=true
 
+@PAUSE
