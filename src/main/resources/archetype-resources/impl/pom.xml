@@ -6,8 +6,9 @@
 		<artifactId>${rootArtifactId}</artifactId>
 		<groupId>${groupId}</groupId>
 		<version>${version}</version>
+        <relativePath>../pom.xml</relativePath>
 	</parent>
-	<groupId>${groupId}</groupId>
+<!-- 	<groupId>${groupId}</groupId> -->
 	<artifactId>${artifactId}</artifactId>
 	<packaging>jar</packaging>
 	<dependencies>

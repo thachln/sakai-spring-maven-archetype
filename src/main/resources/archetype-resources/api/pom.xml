@@ -6,12 +6,13 @@
 		<artifactId>${rootArtifactId}</artifactId>
 		<groupId>${groupId}</groupId>
 		<version>${version}</version>
+        <relativePath>../pom.xml</relativePath>
 	</parent>
-	<groupId>${groupId}</groupId>
+<!-- 	<groupId>${groupId}</groupId> -->
 	<artifactId>${artifactId}</artifactId>
 
 	<properties>
-		<deploy.target>lib</deploy.target>
+		<deploy.target>shared</deploy.target>
 	</properties>
 	<dependencies>
 		<dependency>

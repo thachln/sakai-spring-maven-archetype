@@ -7,7 +7,7 @@
 		<groupId>${groupId}</groupId>
 		<version>${version}</version>
 	</parent>
-	<groupId>${groupId}</groupId>
+<!-- 	<groupId>${groupId}</groupId> -->
 	<artifactId>${artifactId}</artifactId>
 
 	<dependencies>
