@@ -59,4 +59,5 @@
 		class="${package}.controller.HomeController">
 		<property name="sakaiProxy" ref="${package}.logic.SakaiProxy"/>
 	</bean>
+<!--     <import resource="spring-security_cas_local.xml"/> -->
 </beans>

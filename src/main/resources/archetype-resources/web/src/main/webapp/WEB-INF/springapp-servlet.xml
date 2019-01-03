@@ -43,7 +43,7 @@
 	<bean id="templateResolver" class="org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver">
 	  <property name="prefix" value="/WEB-INF/templates/" />
 	  <property name="suffix" value=".html" />
-	  <property name="templateMode" value="HTML5" />
+	  <property name="templateMode" value="HTML" />
 	</bean>
 
 	<bean id="templateEngine" class="org.thymeleaf.spring4.SpringTemplateEngine">
@@ -60,7 +60,7 @@
     <bean class="org.springframework.context.support.PropertySourcesPlaceholderConfigurer">
         <property name="ignoreUnresolvablePlaceholders" value="true" />
         <property name="location">
-            <value>/WEB-INF/spring/appServlet/app-config.properties</value>
+            <value>/WEB-INF/app-config.properties</value>
         </property>
     </bean>
 
