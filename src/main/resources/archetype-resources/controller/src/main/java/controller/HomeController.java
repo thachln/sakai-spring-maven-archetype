@@ -67,13 +67,7 @@ public class HomeController {
 	 * Simply selects the home view to render by returning its name.
      * @return 
 	 */
-	@RequestMapping(value = "/", method = RequestMethod.GET)
-	public String home() {
-		
-		return "home";
-	}
-
-	@RequestMapping(value = "/home", method = RequestMethod.GET)
+	@RequestMapping(value = {"/", "/home"}, method = RequestMethod.GET)
 	public ModelAndView displayHome() {
 		ModelAndView mav = new ModelAndView("home");
 
