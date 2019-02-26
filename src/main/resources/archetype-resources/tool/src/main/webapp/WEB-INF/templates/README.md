@@ -1,0 +1,1 @@
+This folder contains templates which are cloned from web module's templates.
