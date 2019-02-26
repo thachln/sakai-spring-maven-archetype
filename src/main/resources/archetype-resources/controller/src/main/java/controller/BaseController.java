@@ -34,10 +34,12 @@ import javax.servlet.http.HttpSession;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 
 import lombok.Getter;
 import lombok.Setter;
+import ${package}.logic.ProjectLogic;
 import ${package}.logic.SakaiProxy;
 
 /**
@@ -50,6 +52,11 @@ public class BaseController {
     @Getter
     SakaiProxy sakaiProxy = null;
 
+    @Setter    // Used for Sakai Tool
+    @Getter    // Used for Sakai Tool
+    @Autowired // Used for Web App
+    ProjectLogic projectLogic;
+
     @Value("${theme.root}")
     String themeRoot;
 
@@ -59,6 +66,19 @@ public class BaseController {
     
     public String TMP_DIR = System.getProperty("java.io.tmpdir");
 
+    /**
+     * Store common data into session.
+     * <br/>
+     * themeRoot: Root URL of the theme<br/>
+     * currentSiteId:<br/>
+     * userDisplayName::<br/>
+     * userEid::<br/>
+     * userEmail:<br/>
+     * userFirstName:<br/>
+     * userLastName:<br/>
+     * @param request Client HTTP request
+     * @param httpSession Client HTTP session
+     */
     void initSession(HttpServletRequest request, HttpSession httpSession) {
         // Get username when login success
         httpSession.setAttribute("themeRoot", themeRoot);

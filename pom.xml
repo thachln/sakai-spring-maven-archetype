@@ -4,7 +4,7 @@
 
   <groupId>org.sakaiproject.maven-archetype</groupId>
   <artifactId>sakai-spring-maven-archetype</artifactId>
-  <version>12.4</version>
+  <version>12.3</version>
   <packaging>maven-archetype</packaging>
 
   <name>sakai-spring-maven-archetype</name>
