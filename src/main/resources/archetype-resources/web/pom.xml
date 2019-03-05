@@ -2,11 +2,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <parent>
-        <artifactId>${rootArtifactId}</artifactId>
-        <groupId>${groupId}</groupId>
-        <version>${version}</version>
-    </parent>
+<!--     <parent> -->
+<!--         <artifactId>${rootArtifactId}</artifactId> -->
+<!--         <groupId>${groupId}</groupId> -->
+<!--         <version>${version}</version> -->
+<!--     </parent> -->
     <groupId>${groupId}</groupId>
     <artifactId>${artifactId}</artifactId>
     <version>${version}</version>
@@ -37,6 +37,11 @@
             <artifactId>${rootArtifactId}-common</artifactId>
             <version>${module.version}</version>
         </dependency>
+        <dependency>
+            <groupId>${groupId}</groupId>
+            <artifactId>${rootArtifactId}-controller</artifactId>
+            <version>${module.version}</version>
+        </dependency>
 <!--         <dependency> -->
 <!--             <groupId>${groupId}</groupId> -->
 <!--             <artifactId>${rootArtifactId}-impl</artifactId> -->
@@ -57,15 +62,15 @@
 
 		<!-- For uploading -->
 		<dependency>
+			<groupId>commons-fileupload</groupId>
+			<artifactId>commons-fileupload</artifactId>
+			<version>${sakai.commons.fileupload.version}</version>
+		</dependency>
+		<dependency>
 			<groupId>commons-io</groupId>
 			<artifactId>commons-io</artifactId>
-			<scope>compile</scope>
+			<version>2.5</version>
 		</dependency>
-        <dependency>
-            <groupId>commons-fileupload</groupId>
-            <artifactId>commons-fileupload</artifactId>
-            <scope>compile</scope>
-        </dependency>
         <!-- Spring Security -->
         <dependency>
             <groupId>org.springframework.security</groupId>
@@ -172,13 +177,6 @@
             <version>1.1.2</version>
             <type>jar</type>
             <scope>compile</scope>
-        </dependency>
-
-        <!-- we are running a webapp in a servlet container so we need the servlet API -->
-        <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>servlet-api</artifactId>
-            <scope>runtime</scope>
         </dependency>
 
 	   <dependency>
