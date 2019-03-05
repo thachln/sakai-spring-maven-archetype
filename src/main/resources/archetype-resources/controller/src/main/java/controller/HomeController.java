@@ -24,6 +24,11 @@ package ${package}.controller;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
+
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.InitBinder;
@@ -32,21 +37,13 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
-import lombok.Getter;
-import lombok.Setter;
-import ${package}.logic.SakaiProxy;
-
 /**
  * Handles requests for the application home page.
  */
 @Controller
 @EnableWebMvc
-public class HomeController {
+public class HomeController extends BaseController {
     final static protected Log LOG = LogFactory.getLog(HomeController.class);
-
-    @Setter
-    @Getter
-    private SakaiProxy sakaiProxy = null;
 	   
 	   /**
      * This method is called when binding the HTTP parameter to bean (or model).
@@ -68,12 +65,13 @@ public class HomeController {
      * @return 
 	 */
 	@RequestMapping(value = {"/", "/home"}, method = RequestMethod.GET)
-	public ModelAndView displayHome() {
+	public ModelAndView displayHome(HttpServletRequest request, HttpSession httpSession) {
 		ModelAndView mav = new ModelAndView("home");
 
+		initSession(request, httpSession);
 		
-		mav.addObject("currentSiteId", sakaiProxy.getCurrentSiteId());
-		mav.addObject("userDisplayName", sakaiProxy.getCurrentUserDisplayName());
+		mav.addObject("currentSiteId", getCurrentSiteId());
+		mav.addObject("userDisplayName", getCurrentUserDisplayName());
 
 		return mav;
 	}

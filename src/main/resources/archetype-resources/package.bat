@@ -4,7 +4,7 @@ SET JAVA_OPTS='-server -Xms512m -Xmx1024m -XX:PermSize=128m -XX:MaxPermSize=512m
 REM Should use the absolute path for folder release
 
 REM Fill your home folder of Sakai Tomcat here
-SET TOMCAT_HOME=
+REM SET TOMCAT_HOME=
 
 IF "%TOMCAT_HOME%"=="" ( 
     set /p TOMCAT_HOME="Input the path of the TOMCAT: "
@@ -19,6 +19,6 @@ xcopy .\web\src\main\webapp\WEB-INF\templates\*.* .\tool\src\main\webapp\WEB-INF
 mkdir .\tool\src\main\webapp\resources
 xcopy .\web\src\main\webapp\resources .\tool\src\main\webapp\resources /S /Y
 
-CALL mvn clean package sakai:deploy -Dmaven.tomcat.home=%TOMCAT_HOME% -Dmaven.test.skip=true
+CALL mvn clean package sakai:deploy -Dmaven.tomcat.home=%TOMCAT_HOME% -Dmaven.test.skip=true -f pom-sakai.xml
 
 @PAUSE

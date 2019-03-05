@@ -26,15 +26,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.log4j.Logger;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 
 import ${package}.model.Item;
 
 /**
  * Implementation of {@link ProjectLogic}
  * 
- * @author Mike Jennings (mike_jennings@unc.edu)
+ * @author Mike Jennings (mike_jennings@unc.edu), ThachLN@gmail.com
  *
  */
+@Service
+@Component
 public class ProjectLogicImpl implements ProjectLogic {
 
 	private static final Logger log = Logger.getLogger(ProjectLogicImpl.class);
@@ -47,8 +51,8 @@ public class ProjectLogicImpl implements ProjectLogic {
 		
 		List<Item> items = new ArrayList<Item>();
 		
-//		items.add(new Item(1,"hello"));
-//		items.add(new Item(2,"world"));
+        items.add(new Item(1, "hello"));
+        items.add(new Item(2, "world"));
 		
 		return items;
 		

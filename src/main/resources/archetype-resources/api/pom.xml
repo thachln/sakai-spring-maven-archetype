@@ -15,6 +15,13 @@
 		<deploy.target>shared</deploy.target>
 	</properties>
 	<dependencies>
+		<!-- Allow create entities -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-core</artifactId>
+			<scope>provided</scope>
+		</dependency>
+
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>

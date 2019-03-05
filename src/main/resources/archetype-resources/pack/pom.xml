@@ -21,7 +21,7 @@
 		<dependency>
 			<groupId>${groupId}</groupId>
 			<artifactId>${rootArtifactId}-impl</artifactId>
-<!-- 			<version>${version}</version> -->
+<!-- 			<version>${module.version}</version> -->
 		</dependency>
 	</dependencies>
 	<build>

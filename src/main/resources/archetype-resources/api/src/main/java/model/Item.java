@@ -22,22 +22,47 @@ package ${package}.model;
  * under the License.
  */
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-
 /**
  * An example item
  * 
- * @author Mike Jennings (mike_jennings@unc.edu)s
+ * @author Mike Jennings (mike_jennings@unc.edu), ThachLN@gmail.com
  * 
  *
  */
-@Data
-@NoArgsConstructor
-@AllArgsConstructor
 public class Item {
+    private long id;
+    private String name;
 
-	private long id;
-	private String name;
+    public Item(long id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+    /**
+     * Get value of id.
+     * @return the id
+     */
+    public long getId() {
+        return id;
+    }
+    /**
+     * Set the value for id.
+     * @param id the id to set
+     */
+    public void setId(long id) {
+        this.id = id;
+    }
+    /**
+     * Get value of name.
+     * @return the name
+     */
+    public String getName() {
+        return name;
+    }
+    /**
+     * Set the value for name.
+     * @param name the name to set
+     */
+    public void setName(String name) {
+        this.name = name;
+    }
 }
