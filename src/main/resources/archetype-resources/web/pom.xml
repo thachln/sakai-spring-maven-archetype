@@ -198,17 +198,18 @@
             
         </dependency>
         <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>jstl</artifactId>
-            <version>1.1.2</version>
-            <type>jar</type>
-            <scope>compile</scope>
+	        <groupId>javax.servlet</groupId>
+	        <artifactId>jstl</artifactId>
+<!--         <version>${sakai.jstl.version}</version> -->
+<!--             <version>1.2</version> -->
+<!-- 			<scope>compile</scope> -->
         </dependency>
 
         <!-- we are running a webapp in a servlet container so we need the servlet API -->
         <dependency>
             <groupId>javax.servlet</groupId>
-            <artifactId>servlet-api</artifactId>
+            <artifactId>javax.servlet-api</artifactId>
+<!--             <version>4.0.1</version> -->
             <scope>runtime</scope>
         </dependency>
 
