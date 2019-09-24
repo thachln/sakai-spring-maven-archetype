@@ -30,24 +30,26 @@ import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
-import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 import lombok.Getter;
 import lombok.Setter;
 import ${package}.logic.SakaiProxy;
+import ${package}.logic.ProjectLogic;
 
 /**
  * Handles requests for the application home page.
  */
 @Controller
-@EnableWebMvc
 public class HomeController {
     final static protected Log LOG = LogFactory.getLog(HomeController.class);
 
     @Setter
     @Getter
     private SakaiProxy sakaiProxy = null;
-	   
+
+    @Setter
+    @Getter
+    private ProjectLogic projectLogic = null;
 	   /**
      * This method is called when binding the HTTP parameter to bean (or model).
      * 
@@ -74,6 +76,9 @@ public class HomeController {
 		
 		mav.addObject("currentSiteId", sakaiProxy.getCurrentSiteId());
 		mav.addObject("userDisplayName", sakaiProxy.getCurrentUserDisplayName());
+		
+		mav.addObject("items", projectLogic.getItems());
+		
 
 		return mav;
 	}

@@ -55,9 +55,9 @@
 	</bean>
 
 <!--     <context:component-scan base-package="${package}" /> -->
-	<bean name="/home"
-		class="${package}.controller.HomeController">
+	<bean name="/home" class="${package}.controller.HomeController">
 		<property name="sakaiProxy" ref="${package}.logic.SakaiProxy"/>
+		<property name="projectLogic" ref="${package}.logic.ProjectLogic"/>
 	</bean>
 <!--     <import resource="spring-security_cas_local.xml"/> -->
 </beans>

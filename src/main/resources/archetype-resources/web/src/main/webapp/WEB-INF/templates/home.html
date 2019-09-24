@@ -19,6 +19,16 @@
             <p>
                 <a id="signup" class="btn btn-success btn-lg">Sign up</a>
             </p>
+            
+            <p>
+                User display name: <span th:text="${userDisplayName}"></span><br/>
+                Current site: <span th:text="${currentSiteId}"></span>
+            </p>
+            <p>
+            	<span th:each="item : ${items}">
+            		<span th:text="${item}"></span>
+            	</span>
+            </p>
         </div>
         <div th:insert="~{fragments/footer :: footer}">&copy; 2017 The MKS Group</div>
     </div>
