@@ -41,7 +41,6 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
  * Handles requests for the application home page.
  */
 @Controller
-@EnableWebMvc
 public class HomeController extends BaseController {
     final static protected Log LOG = LogFactory.getLog(HomeController.class);
 	   

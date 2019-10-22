@@ -118,11 +118,12 @@
 			<artifactId>${rootArtifactId}-api</artifactId>
 		</dependency>
 		
-        <!-- we are running a webapp in a servlet container so we need the servlet API -->
-        <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>servlet-api</artifactId>
-        </dependency>
+      <dependency>
+        <groupId>javax.servlet</groupId>
+        <artifactId>javax.servlet-api</artifactId>
+<!--         <version>4.0.1</version> -->
+<!--         <scope>provided</scope> -->
+      </dependency>
 
 		<!-- We need this special package to run the jsps in Sakai -->
 		<dependency>

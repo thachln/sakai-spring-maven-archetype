@@ -10,14 +10,16 @@
     <packaging>war</packaging>
 
 	<properties>
-	    <sakai.kernel.version>19.2</sakai.kernel.version>
+	    <sakai.kernel.version>19.3</sakai.kernel.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<spring.version>4.3.17.RELEASE</spring.version>
-        <spring.security.version>4.2.6.RELEASE</spring.security.version>
-        <module.version>19.2</module.version>
+		<spring.version>4.3.19.RELEASE</spring.version>
+        <spring.security.version>4.2.9.RELEASE</spring.security.version>
+        <module.version>19.3</module.version>
         <thymeleaf.version>3.0.8.RELEASE</thymeleaf.version>
         <sakai.hibernate.version>4.3.11.Final</sakai.hibernate.version>
-        <sakai.commons.fileupload.version>1.3.3</sakai.commons.fileupload.version>
+        <sakai.commons.fileupload.version>1.4</sakai.commons.fileupload.version>
+        <sakai.jackson.version>2.9.10</sakai.jackson.version>
+        <sakai.jstl.version>1.2</sakai.jstl.version>
         <sakai.log4j.version>1.2.17</sakai.log4j.version>
     	<sakai.slf4j.version>1.7.25</sakai.slf4j.version>
 	</properties>
@@ -154,26 +156,19 @@
         </dependency>
 
         <!-- Jackson JSON Mapper -->
-        <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-databind</artifactId>
-            <version>2.6.6</version>
-        </dependency>
+      <dependency>
+        <groupId>com.fasterxml.jackson.core</groupId>
+        <artifactId>jackson-databind</artifactId>
+        <version>${sakai.jackson.version}</version>
+        <scope>provided</scope>
+      </dependency>
 
-        <dependency>
-            <groupId>taglibs</groupId>
-            <artifactId>standard</artifactId>
-            <version>1.1.2</version>
-            <type>jar</type>
-            
-        </dependency>
-        <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>jstl</artifactId>
-            <version>1.1.2</version>
-            <type>jar</type>
-            <scope>compile</scope>
-        </dependency>
+      <dependency>
+        <groupId>javax.servlet</groupId>
+        <artifactId>jstl</artifactId>
+        <version>${sakai.jstl.version}</version>
+        <scope>provided</scope>
+      </dependency>
 
 	   <dependency>
 	      <groupId>org.slf4j</groupId>

@@ -34,7 +34,6 @@ import javax.servlet.http.HttpSession;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 
 import lombok.Getter;
@@ -54,7 +53,6 @@ public class BaseController {
 
     @Setter    // Used for Sakai Tool
     @Getter    // Used for Sakai Tool
-    @Autowired // Used for Web App
     ProjectLogic projectLogic;
 
     @Value("${theme.root}")

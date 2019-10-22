@@ -54,10 +54,7 @@
 	  <property name="order" value="1" />
 	</bean>
 
-<!--     <context:component-scan base-package="${package}" /> -->
-	<bean name="/home"
-		class="${package}.controller.HomeController">
-		<property name="sakaiProxy" ref="${package}.logic.SakaiProxy"/>
-	</bean>
+    <context:component-scan base-package="${package}" />
+
 <!--     <import resource="spring-security_cas_local.xml"/> -->
 </beans>
