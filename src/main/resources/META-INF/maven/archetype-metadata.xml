@@ -9,7 +9,7 @@
 				<include>**/*.bat</include>
 				<include>**/*.cmd</include>
 				<include>pom-sakai.xml</include>
-				<include>pome.xml</include>
+				<include>pom.xml</include>
 			</includes>
 		</fileSet>
 	</fileSets>
