@@ -9,11 +9,11 @@
 	<name>sakai-spring-maven-archetype</name>
 	<description>Archetype to generate a project with sakai and spring</description>
 
-    <!-- Place the source of this project with Sakai 19.2's source -->
+    <!-- Place the source of this project with Sakai's source -->
     <parent>
         <groupId>org.sakaiproject</groupId>
         <artifactId>master</artifactId>
-        <version>20.1</version>
+        <version>22-SNAPSHOT</version>
         <relativePath>../master/pom.xml</relativePath>
     </parent>
 <!-- 	<parent> -->
@@ -48,10 +48,10 @@
 		</dependencies>
 	</dependencyManagement>
 	<properties>
-	    <sakai.kernel.version>19.2</sakai.kernel.version>
+	    <sakai.kernel.version>22-SNAPSHOT</sakai.kernel.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<spring.version>4.3.17.RELEASE</spring.version>
-        <spring.security.version>4.2.6.RELEASE</spring.security.version>
+		<spring.version>5.2.9.RELEASE</spring.version>
+        <spring.security.version>5.2.6.RELEASE</spring.security.version>
         <module.version>${version}</module.version>
         <thymeleaf.version>3.0.8.RELEASE</thymeleaf.version>
 	</properties>
