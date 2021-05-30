@@ -13,7 +13,7 @@
     <parent>
         <groupId>org.sakaiproject</groupId>
         <artifactId>master</artifactId>
-        <version>22-SNAPSHOT</version>
+        <version>21.0</version>
         <relativePath>../master/pom.xml</relativePath>
     </parent>
 <!-- 	<parent> -->
@@ -48,12 +48,12 @@
 	<properties>
 	    <sakai.kernel.version>20.1</sakai.kernel.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<spring.version>4.3.25.RELEASE</spring.version>
-        <spring.security.version>4.2.13.RELEASE</spring.security.version>
-        <spring.data-commons.version>1.13.23.RELEASE</spring.data-commons.version>
-        <spring.data-jpa.version>1.11.23.RELEASE</spring.data-jpa.version>
+		<spring.version>5.2.9.RELEASE</spring.version>
+        <spring.security.version>5.2.6.RELEASE</spring.security.version>
+        <spring.data-commons.version>2.3.4.RELEASE</spring.data-commons.version>
+        <spring.data-jpa.version>2.3.4.RELEASE</spring.data-jpa.version>
         <module.version>${version}</module.version>
-        <thymeleaf.version>3.0.11.RELEASE</thymeleaf.version>
+        <thymeleaf.version>3.0.12.RELEASE</thymeleaf.version>
 	</properties>
 
 	<repositories>

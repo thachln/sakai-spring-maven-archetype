@@ -1,1 +1,1 @@
-mvn archetype:generate -DarchetypeGroupId=org.sakaiproject.maven-archetype -DarchetypeArtifactId=sakai-spring-maven-archetype -DarchetypeVersion=22-SNAPSHOT -Dversion=22-SNAPSHOT
+mvn archetype:generate -DarchetypeGroupId=org.sakaiproject.maven-archetype -DarchetypeArtifactId=sakai-spring-maven-archetype -DarchetypeVersion=21.0 -Dversion=21.0
