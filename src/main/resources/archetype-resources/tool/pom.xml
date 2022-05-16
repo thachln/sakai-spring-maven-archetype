@@ -83,11 +83,11 @@
 		    <artifactId>thymeleaf-spring4</artifactId>
 		    <version>${thymeleaf.version}</version>
 		</dependency>
-        <dependency>
-            <groupId>com.google.code.gson</groupId>
-            <artifactId>gson</artifactId>
-            <version>2.7</version>
-        </dependency>
+<!--         <dependency> -->
+<!--             <groupId>com.google.code.gson</groupId> -->
+<!--             <artifactId>gson</artifactId> -->
+<!--             <version>2.7</version> -->
+<!--         </dependency> -->
         
         <!-- Jackson JSON Mapper -->
         <dependency>
@@ -126,18 +126,18 @@
       </dependency>
 
 		<!-- We need this special package to run the jsps in Sakai -->
-		<dependency>
-			<groupId>org.sakaiproject</groupId>
-			<artifactId>sakai-jsp-adapter</artifactId>
-			<version>0.10-K1</version>
-			<scope>runtime</scope>
-			<exclusions>
-				<exclusion>
-					<groupId>org.sakaiproject</groupId>
-					<artifactId>sakai-kernel-api</artifactId>
-				</exclusion>
-			</exclusions>
-		</dependency>
+<!-- 		<dependency> -->
+<!-- 			<groupId>org.sakaiproject</groupId> -->
+<!-- 			<artifactId>sakai-jsp-adapter</artifactId> -->
+<!-- 			<version>0.10-K1</version> -->
+<!-- 			<scope>runtime</scope> -->
+<!-- 			<exclusions> -->
+<!-- 				<exclusion> -->
+<!-- 					<groupId>org.sakaiproject</groupId> -->
+<!-- 					<artifactId>sakai-kernel-api</artifactId> -->
+<!-- 				</exclusion> -->
+<!-- 			</exclusions> -->
+<!-- 		</dependency> -->
 
 		<!-- third party dependencies -->
 

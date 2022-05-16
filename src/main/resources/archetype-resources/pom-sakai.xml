@@ -13,7 +13,7 @@
     <parent>
         <groupId>org.sakaiproject</groupId>
         <artifactId>master</artifactId>
-        <version>21.0</version>
+        <version>22.0</version>
         <relativePath>../master/pom.xml</relativePath>
     </parent>
 <!-- 	<parent> -->
@@ -43,17 +43,19 @@
 			<dependency>
 				<groupId>log4j</groupId>
 				<artifactId>log4j</artifactId>
-				<version>1.2.17</version>
+				<version>1.2.17.1</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
-	<properties>
-	    <sakai.kernel.version>21.0</sakai.kernel.version>
+	<properties>       
+	    <sakai.kernel.version>22.0</sakai.kernel.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<spring.version>5.2.9.RELEASE</spring.version>
-        <spring.security.version>5.2.6.RELEASE</spring.security.version>
+		<spring.version>5.3.18</spring.version>
+        <spring.security.version>5.4.7</spring.security.version>
+        <spring.data.commons.version>2.5.3</spring.data.commons.version>
+        <spring.data.jpa.version>2.5.3</spring.data.jpa.version>
         <module.version>${version}</module.version>
-        <thymeleaf.version>3.0.8.RELEASE</thymeleaf.version>
+        <thymeleaf.version>3.0.12.RELEASE</thymeleaf.version>
 	</properties>
 
 	<repositories>

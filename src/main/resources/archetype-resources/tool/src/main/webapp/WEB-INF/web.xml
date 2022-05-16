@@ -10,15 +10,20 @@
 	<display-name>sakai.${parentArtifactId}</display-name>
 
 	<!--  This application's servlet class -->
-	<servlet>
-		<servlet-name>sakai.${parentArtifactId}</servlet-name>
-	    <servlet-class>uk.ac.cam.caret.sakai.WebappToolServlet</servlet-class>
-	    <init-param>
-	      	<param-name>main-page</param-name>
-	      	<param-value>/home</param-value>
-	    </init-param>
-		<load-on-startup>0</load-on-startup>
-  	</servlet>
+    <!-- Default configuration file: springapp-servlet.xml -->
+    <servlet>
+        <servlet-name>sakai.${parentArtifactId}</servlet-name>
+        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+        <init-param>
+        	<param-name>namespace</param-name>
+        	<param-value>springapp-servlet</param-value>
+        </init-param>
+        <load-on-startup>0</load-on-startup>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>sakai.${parentArtifactId}</servlet-name>
+        <url-pattern>/*</url-pattern>
+    </servlet-mapping>
 
 	<!-- Sakai Request Filter -->
 	<filter>
@@ -48,16 +53,5 @@
 	<listener>
 		<listener-class>org.sakaiproject.util.SakaiContextLoaderListener</listener-class>
 	</listener>
-	
-    <!-- Default configuration file: springapp-servlet.xml -->
-    <servlet>
-        <servlet-name>springapp</servlet-name>
-        <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
-        <load-on-startup>1</load-on-startup>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>springapp</servlet-name>
-        <url-pattern>/</url-pattern>
-    </servlet-mapping>
 
 </web-app>
