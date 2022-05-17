@@ -10,18 +10,19 @@
     <packaging>war</packaging>
 
 	<properties>
-		<sakai.kernel.version>20.1</sakai.kernel.version>
+		<sakai.kernel.version>22.0</sakai.kernel.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<spring.version>4.3.25.RELEASE</spring.version>
-		<spring.security.version>4.2.13.RELEASE</spring.security.version>
-		<module.version>20.1</module.version>
-		<thymeleaf.version>3.0.11.RELEASE</thymeleaf.version>
-		<sakai.hibernate.version>4.3.11.Final</sakai.hibernate.version>
+		<spring.version>5.3.18</spring.version>
+		<spring.security.version>5.4.7</spring.security.version>
+		<module.version>22.0</module.version>
+		<thymeleaf.version>3.0.12.RELEASE</thymeleaf.version>
+		<sakai.hibernate.version>5.3.20.Final</sakai.hibernate.version>
+		<sakai.commons-io.version>2.11.0</sakai.commons-io.version>
 		<sakai.commons.fileupload.version>1.4</sakai.commons.fileupload.version>
-		<sakai.jackson.version>2.10.1</sakai.jackson.version>
+		<sakai.jackson.version>2.13.2</sakai.jackson.version>
 		<sakai.jstl.version>1.2</sakai.jstl.version>
-		<sakai.log4j.version>1.2.17</sakai.log4j.version>
-		<sakai.slf4j.version>1.7.30</sakai.slf4j.version>
+<!-- 		<sakai.log4j.version>1.2.17</sakai.log4j.version> -->
+		<sakai.slf4j.version>1.7.32</sakai.slf4j.version>
 	</properties>
 
     <dependencies>
@@ -67,7 +68,7 @@
 		<dependency>
 			<groupId>commons-io</groupId>
 			<artifactId>commons-io</artifactId>
-			<version>2.6</version>
+			<version>${sakai.commons-io.version}</version>
 		</dependency>
         <!-- Spring Security -->
         <dependency>
@@ -230,10 +231,10 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.1</version>
+                <version>3.10.1</version>
                 <configuration>
-                    <source>1.8</source>
-                    <target>1.8</target>
+                    <source>1.11</source>
+                    <target>1.11</target>
                 </configuration>
             </plugin>
             <!-- configure the war plugin to correctly use the standard maven structure -->
