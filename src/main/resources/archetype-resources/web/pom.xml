@@ -10,11 +10,11 @@
     <packaging>war</packaging>
 
 	<properties>
-		<sakai.kernel.version>22.0</sakai.kernel.version>
+		<sakai.kernel.version>22.2</sakai.kernel.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<spring.version>5.3.18</spring.version>
 		<spring.security.version>5.4.7</spring.security.version>
-		<module.version>22.0</module.version>
+		<module.version>22.2</module.version>
 		<thymeleaf.version>3.0.12.RELEASE</thymeleaf.version>
 		<sakai.hibernate.version>5.3.20.Final</sakai.hibernate.version>
 		<sakai.commons-io.version>2.11.0</sakai.commons-io.version>
