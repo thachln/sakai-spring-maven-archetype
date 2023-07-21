@@ -22,9 +22,6 @@
 
 package ${package}.controller;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
-
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
@@ -42,8 +39,7 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
  */
 @Controller
 public class HomeController extends BaseController {
-    final static protected Log LOG = LogFactory.getLog(HomeController.class);
-	   
+ 
 	   /**
      * This method is called when binding the HTTP parameter to bean (or model).
      * 

@@ -28,8 +28,8 @@ import java.io.IOException;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
+import lombok.extern.slf4j.Slf4j;
 
-import org.apache.log4j.Logger;
 import org.w3c.dom.Document;
 import org.xml.sax.SAXException;
 
@@ -41,9 +41,8 @@ import ${package}.common.AppUtility;
  * @author Thach Ngoc Le (ThachLN@mks.com.vn)
  *
  */
+@Slf4j
 public class AppUtility {
-    /** For logging. */
-    private static final Logger LOG = Logger.getLogger(AppUtility.class);
 
     /**
      * Parse a XML File into a document model.
@@ -60,11 +59,11 @@ public class AppUtility {
             db = dbf.newDocumentBuilder();
             xmlDoc = db.parse(xmlFile);
         } catch (ParserConfigurationException ex) {
-            LOG.error("Could not parse the file.", ex);
+            log.error("Could not parse the file.", ex);
         } catch (SAXException ex) {
-            LOG.error("Error in XML file.", ex);
+        	log.error("Error in XML file.", ex);
         } catch (IOException ex) {
-            LOG.error("Could not open file.", ex);
+        	log.error("Could not open file.", ex);
         }
         
         return xmlDoc;

@@ -32,20 +32,19 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Value;
 
 import lombok.Getter;
 import lombok.Setter;
+import lombok.extern.slf4j.Slf4j;
 import ${package}.logic.ProjectLogic;
 import ${package}.logic.SakaiProxy;
 
 /**
  * Handles requests for the application home page.
  */
+@Slf4j
 public class BaseController {
-    final static protected Log LOG = LogFactory.getLog(BaseController.class);
 
     @Setter
     @Getter
@@ -167,7 +166,7 @@ public class BaseController {
             
             // response.setContentLength((int) fileSize);
         } catch (IOException ex) {
-            LOG.error("Could not read the attachment content.", ex);
+            log.error("Could not read the attachment content.", ex);
         } finally {
             if (outStream != null) {
                 outStream.close();
