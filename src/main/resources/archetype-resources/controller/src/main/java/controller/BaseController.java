@@ -32,6 +32,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import org.sakaiproject.component.cover.ComponentManager;
 import org.springframework.beans.factory.annotation.Value;
 
 import lombok.Getter;
@@ -80,6 +81,11 @@ public class BaseController {
         // Get username when login success
         httpSession.setAttribute("themeRoot", themeRoot);
         
+        if (sakaiProxy == null) {
+        	sakaiProxy = ComponentManager.get(SakaiProxy.class);
+        	log.debug("ComponentManager.get(SakaiProxy.class)=" + sakaiProxy);
+        }
+
         if (sakaiProxy != null) {
             httpSession.setAttribute("currentSiteId", sakaiProxy.getCurrentSiteId());
             httpSession.setAttribute("userDisplayName", sakaiProxy.getCurrentUserDisplayName());

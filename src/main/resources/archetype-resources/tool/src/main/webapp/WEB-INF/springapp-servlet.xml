@@ -38,18 +38,18 @@
 <!--     </bean> -->
 
 <!-- Using Thymeleaf for layout. Refer: http://www.thymeleaf.org/doc/tutorials/3.0/thymeleafspring.html -->
-	<bean id="templateResolver" class="org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver">
+	<bean id="templateResolver" class="org.thymeleaf.spring5.templateresolver.SpringResourceTemplateResolver">
 	  <property name="prefix" value="/WEB-INF/templates/" />
 	  <property name="suffix" value=".html" />
 	  <property name="templateMode" value="HTML5" />
 	</bean>
 
-	<bean id="templateEngine" class="org.thymeleaf.spring4.SpringTemplateEngine">
+	<bean id="templateEngine" class="org.thymeleaf.spring5.SpringTemplateEngine">
 		<property name="templateResolver" ref="templateResolver" />
 		<property name="enableSpringELCompiler" value="true" />
 	</bean>
 
-	<bean class="org.thymeleaf.spring4.view.ThymeleafViewResolver">
+	<bean class="org.thymeleaf.spring5.view.ThymeleafViewResolver">
 	  <property name="templateEngine" ref="templateEngine" />
 	  <property name="order" value="1" />
 	</bean>
