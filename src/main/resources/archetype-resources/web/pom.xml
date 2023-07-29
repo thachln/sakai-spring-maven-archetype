@@ -179,6 +179,7 @@
 		<dependency>
 			<groupId>org.sakaiproject.kernel</groupId>
 			<artifactId>sakai-component-manager</artifactId>
+			<version>${sakai.kernel.version}</version>
 		</dependency>
 
 	</dependencies>
