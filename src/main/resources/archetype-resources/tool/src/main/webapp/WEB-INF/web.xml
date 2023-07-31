@@ -10,13 +10,13 @@
 	<display-name>sakai.${parentArtifactId}</display-name>
 
 	<!--  This application's servlet class -->
-    <!-- Default configuration file: springapp-servlet.xml -->
+    <!-- Default configuration file: sakaiapp-servlet.xml -->
     <servlet>
         <servlet-name>sakai.${parentArtifactId}</servlet-name>
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
         <init-param>
         	<param-name>namespace</param-name>
-        	<param-value>springapp-servlet</param-value>
+        	<param-value>sakaiapp-servlet</param-value>
         </init-param>
         <load-on-startup>0</load-on-startup>
     </servlet>

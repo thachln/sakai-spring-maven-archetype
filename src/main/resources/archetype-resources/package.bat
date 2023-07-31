@@ -12,7 +12,9 @@ IF "%TOMCAT_HOME%"=="" (
 
 REM Copy resources from web module to sakai module
 copy .\web\src\main\webapp\WEB-INF\app-config.properties .\tool\src\main\webapp\WEB-INF
-copy .\web\src\main\webapp\WEB-INF\springapp-servlet.xml .\tool\src\main\webapp\WEB-INF
+
+REM Trying
+REM copy .\web\src\main\webapp\WEB-INF\springapp-servlet.xml .\tool\src\main\webapp\WEB-INF
 copy .\web\src\main\webapp\WEB-INF\applicationContext.xml .\tool\src\main\webapp\WEB-INF
 
 mkdir .\tool\src\main\webapp\WEB-INF\templates\fragments

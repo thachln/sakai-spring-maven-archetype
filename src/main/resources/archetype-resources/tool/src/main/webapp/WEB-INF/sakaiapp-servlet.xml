@@ -104,9 +104,11 @@
 	</bean>
 	
 	<!-- Step 3 -->
-	<bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
-		<property name="entityManagerFactory" ref="entityManagerFactory" />
-	</bean>
+	<!-- Use defaul transaction in Sakai  -->
+	<!-- org.sakaiproject.springframework.orm.hibernate.GlobalTransactionManager -->
+<!-- 	<bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager"> -->
+<!-- 		<property name="entityManagerFactory" ref="entityManagerFactory" /> -->
+<!-- 	</bean> -->
 	
 	<jpa:repositories base-package="${package}.repository" />
 </beans>
