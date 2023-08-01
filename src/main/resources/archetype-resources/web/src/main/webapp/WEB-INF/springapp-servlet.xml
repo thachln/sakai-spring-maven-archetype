@@ -74,19 +74,25 @@
 	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 		<property name="driverClassName" value="org.mariadb.jdbc.Driver" />
 		<property name="url" value="jdbc:mariadb://127.0.0.1:3306/sakai?useUnicode=true&amp;characterEncoding=UTF-8"/>
+		<property name="username" value="" />
+		<property name="password" value="" />
 <!-- 		<property name="driverClassName" value="com.mysql.cj.jdbc.Driver" /> -->
 <!-- 		<property name="url" value="jdbc:mysql://127.0.0.1:3306/sakai?useUnicode=true&amp;characterEncoding=UTF-8&amp;useSSL=false" /> -->
 <!-- 		<property name="driverClassName" value="org.postgresql.Driver" /> -->
 <!-- 		<property name="url" value="jdbc:postgresql://localhost:5432/sakaiapp" /> -->
 
-		<property name="username" value="" />
-		<property name="password" value="" />
+
+		
+<!-- 		<property name="driverClassName" value="org.postgresql.Driver" /> -->
+<!-- 		<property name="url" value="jdbc:postgresql://localhost:5439/yourdb" /> -->
+<!-- 		<property name="username" value="" /> -->
+<!-- 		<property name="password" value="" /> -->
 	</bean>
 	
 	<!-- Step 2 -->
 	<bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
 		<property name="dataSource" ref="dataSource" />
-		<property name="packagesToScan" value="org.sakaiproject.gencode.tutor1.entity" />
+		<property name="packagesToScan" value="${package}.entity" />
 		<property name="jpaVendorAdapter">
 			<bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
 				<property name="generateDdl" value="true" />
@@ -95,7 +101,7 @@
 		<property name="jpaProperties">
 			<props>
 				<prop key="hibernate.show_sql">true</prop>
-				<prop key="hibernate.hbm2ddl.auto">update</prop>
+				<prop key="hibernate.hbm2ddl.auto">none</prop>
 				<prop key="hibernate.dialect">org.hibernate.dialect.MySQL5InnoDBDialect</prop>
 <!-- 				<prop key="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</prop> -->
 				<prop key="hibernate.globally_quoted_identifiers">true</prop>
