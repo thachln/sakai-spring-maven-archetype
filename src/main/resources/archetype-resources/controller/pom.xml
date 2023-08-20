@@ -28,6 +28,16 @@
             <artifactId>${rootArtifactId}-impl</artifactId>
 <!--             <version>${module.version}</version> -->
         </dependency>
+        <dependency>
+            <groupId>${groupId}</groupId>
+            <artifactId>${rootArtifactId}-jpa</artifactId>
+            <version>${module.version}</version>
+        </dependency>
+		<dependency>
+            <groupId>${groupId}</groupId>
+            <artifactId>${rootArtifactId}-jpa</artifactId>
+            <version>${module.version}</version>
+        </dependency>
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
