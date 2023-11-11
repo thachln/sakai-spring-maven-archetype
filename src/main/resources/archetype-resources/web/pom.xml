@@ -11,19 +11,21 @@
 	<packaging>war</packaging>
 
 	<properties>
-		<sakai.kernel.version>22.3</sakai.kernel.version>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<spring.version>5.3.18</spring.version>
-		<spring.security.version>5.4.7</spring.security.version>
-		<module.version>22.3</module.version>
-		<thymeleaf.version>3.0.12.RELEASE</thymeleaf.version>
-		<sakai.hibernate.version>5.3.20.Final</sakai.hibernate.version>
-		<sakai.commons-io.version>2.11.0</sakai.commons-io.version>
-		<sakai.commons.fileupload.version>1.4</sakai.commons.fileupload.version>
-		<sakai.jackson.version>2.13.2</sakai.jackson.version>
-		<sakai.jstl.version>1.2</sakai.jstl.version>
-		<!-- 		<sakai.log4j.version>1.2.17</sakai.log4j.version> -->
-		<!-- 		<sakai.slf4j.version>1.7.32</sakai.slf4j.version> -->
+        <sakai.kernel.version>23.0</sakai.kernel.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <spring.version>5.3.27</spring.version>
+        <spring.security.version>5.5.7</spring.security.version>
+        <module.version>23.0</module.version>
+        <thymeleaf.version>3.0.15.RELEASE</thymeleaf.version>
+        <sakai.hibernate.version>5.6.15.Final</sakai.hibernate.version>
+        <sakai.commons-io.version>2.13.0</sakai.commons-io.version>
+        <sakai.commons.fileupload.version>1.5</sakai.commons.fileupload.version>
+        <sakai.jackson.version>2.13.2</sakai.jackson.version>
+        <sakai.jstl.version>1.2</sakai.jstl.version>
+        <!-- More -->
+        <sakai.log4j.version>2.20.0</sakai.log4j.version>
+        <sakai.slf4j.version>1.7.36</sakai.slf4j.version>
+        <sakai.poi.version>5.2.3</sakai.poi.version>
 	</properties>
 
 	<dependencies>
