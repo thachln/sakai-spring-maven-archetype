@@ -25,8 +25,6 @@ package ${package}.logic;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.springframework.stereotype.Component;
-import org.springframework.stereotype.Service;
 import lombok.extern.slf4j.Slf4j;
 
 import ${package}.model.Item;
@@ -37,8 +35,6 @@ import ${package}.model.Item;
  * @author Mike Jennings (mike_jennings@unc.edu), ThachLN@gmail.com
  *
  */
-@Service
-@Component
 @Slf4j
 public class ProjectLogicImpl implements ProjectLogic {
 
