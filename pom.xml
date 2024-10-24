@@ -1,71 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-  <modelVersion>4.0.0</modelVersion>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
 
-  <groupId>org.sakaiproject.maven-archetype</groupId>
-  <artifactId>sakai-gencode-adv</artifactId>
-  <version>23.0</version>
-  <packaging>maven-archetype</packaging>
+	<groupId>org.sakaiproject.maven-archetype</groupId>
+	<artifactId>sakai-gencode-adv</artifactId>
+	<version>23.2</version>
+	<packaging>maven-archetype</packaging>
 
-  <name>sakai-gencode-adv</name>
+	<name>sakai-gencode-adv</name>
 
-  <build>
-    <extensions>
-      <extension>
-        <groupId>org.apache.maven.archetype</groupId>
-        <artifactId>archetype-packaging</artifactId>
-        <version>3.2.1</version>
-      </extension>
-<!--       <extension> -->
-<!--         <groupId>org.apache.maven.wagon</groupId> -->
-<!--         <artifactId>wagon-ssh-external</artifactId> -->
-<!--         <version>2.12</version> -->
-<!--       </extension> -->
-    </extensions>
-    <pluginManagement>
-      <plugins>
-        <plugin>
-          <groupId>org.apache.maven.plugins</groupId>
-          <artifactId>maven-archetype-plugin</artifactId>
-          <version>3.2.1</version>
-        </plugin>
-      </plugins>
-    </pluginManagement>
-  </build>
+	<build>
+		<extensions>
+			<extension>
+				<groupId>org.apache.maven.archetype</groupId>
+				<artifactId>archetype-packaging</artifactId>
+				<version>3.2.1</version>
+			</extension>
+			<!--       <extension> -->
+			<!--         <groupId>org.apache.maven.wagon</groupId> -->
+			<!--         <artifactId>wagon-ssh-external</artifactId> -->
+			<!--         <version>2.12</version> -->
+			<!--       </extension> -->
+		</extensions>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-archetype-plugin</artifactId>
+					<version>3.2.1</version>
+<!--					<configuration>-->
+<!--						<properties>-->
+<!--							<escapeTool>true</escapeTool>-->
+<!--						</properties>-->
+<!--					</configuration>-->
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
 
-<!--   <description>Archetype to generate a project with sakai and spring</description> -->
+	<!--   <description>Archetype to generate a project with sakai and
+	spring</description> -->
 
-<!--   <scm> -->
-<!--     <connection>scm:svn:https://source.sakaiproject.org/contrib/archetypes/spring-mvc/tags/sakai-gencode-adv-23.0</connection> -->
-<!--     <developerConnection>scm:svn:https://source.sakaiproject.org/contrib/archetypes/spring-mvc/tags/sakai-gencode-adv-23.0</developerConnection> -->
-<!--     <url>https://source.sakaiproject.org/contrib/archetypes/spring-mvc/tags/sakai-gencode-adv-23.0</url> -->
-<!--   </scm> -->
-  
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  </properties>
+	<!--   <scm> -->
+	<!--
+	<connection>scm:svn:https://source.sakaiproject.org/contrib/archetypes/spring-mvc/tags/sakai-gencode-adv-23.0</connection> -->
+	<!--
+	<developerConnection>scm:svn:https://source.sakaiproject.org/contrib/archetypes/spring-mvc/tags/sakai-gencode-adv-23.0</developerConnection> -->
+	<!--
+	<url>https://source.sakaiproject.org/contrib/archetypes/spring-mvc/tags/sakai-gencode-adv-23.0</url> -->
+	<!--   </scm> -->
 
-  <licenses>
-    <license>
-      <name>Educational Community License, Version 2.0</name>
-      <url>http://www.osedu.org/licenses/ECL-2.0</url>
-      <distribution>repo</distribution>
-    </license>
-  </licenses>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
 
-<!--   <distributionManagement> -->
-<!--     <repository> -->
-<!--       <uniqueVersion>false</uniqueVersion> -->
-<!--       <id>sakai-maven2-scp</id> -->
-<!--       <name>Sakai maven2 repository</name> -->
-<!--       <url>scpexe://source.sakaiproject.org/var/www/html/maven2</url> -->
-<!--     </repository> -->
-<!--     <snapshotRepository> -->
-<!--       <uniqueVersion>false</uniqueVersion> -->
-<!--       <id>sakai-maven-snapshots-scp</id> -->
-<!--       <name>Sakai snapshot Repo</name> -->
-<!--       <url>scpexe://source.sakaiproject.org/var/www/html/maven2-snapshots</url> -->
-<!--     </snapshotRepository> -->
-<!--     <downloadUrl>http://source.sakaiproject.org/maven2/</downloadUrl> -->
-<!--   </distributionManagement> -->
+	<licenses>
+		<license>
+			<name>Educational Community License, Version 2.0</name>
+			<url>http://www.osedu.org/licenses/ECL-2.0</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+
+	<!--   <distributionManagement> -->
+	<!--     <repository> -->
+	<!--       <uniqueVersion>false</uniqueVersion> -->
+	<!--       <id>sakai-maven2-scp</id> -->
+	<!--       <name>Sakai maven2 repository</name> -->
+	<!--       <url>scpexe://source.sakaiproject.org/var/www/html/maven2</url> -->
+	<!--     </repository> -->
+	<!--     <snapshotRepository> -->
+	<!--       <uniqueVersion>false</uniqueVersion> -->
+	<!--       <id>sakai-maven-snapshots-scp</id> -->
+	<!--       <name>Sakai snapshot Repo</name> -->
+	<!--
+	<url>scpexe://source.sakaiproject.org/var/www/html/maven2-snapshots</url> -->
+	<!--     </snapshotRepository> -->
+	<!--     <downloadUrl>http://source.sakaiproject.org/maven2/</downloadUrl> -->
+	<!--   </distributionManagement> -->
 </project>

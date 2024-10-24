@@ -62,7 +62,9 @@
     <!-- Load configuration file. -->
     <bean class="org.springframework.context.support.PropertySourcesPlaceholderConfigurer">
         <property name="ignoreUnresolvablePlaceholders" value="true" />
-        <property name="location" value="file:///etc/sakai/sakai.properties"/>
+        <!-- Use below location for production -->
+<!--         <property name="location" value="file:///etc/myworkspace/${artifactId}/app-config.properties"/> -->
+        <property name="location" value="/WEB-INF/app-config.properties"/>
     </bean>
 
 	<context:component-scan base-package="${package}" />
@@ -70,10 +72,10 @@
 	<!-- Datasource -->
 	<!-- Step 1 -->
 	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-		<property name="driverClassName" value="${driverClassName_at_javax.sql.BaseDataSource}" />
-		<property name="url" value="${url_at_javax.sql.BaseDataSource}" />
-		<property name="username" value="${username_at_javax.sql.BaseDataSource}" />
-		<property name="password" value="${password_at_javax.sql.BaseDataSource}" />
+		<property name="driverClassName" value="${${driverClassName}}" />
+		<property name="url" value="${${url}}" />
+		<property name="username" value="${${username}}" />
+		<property name="password" value="${${password}}" />
 	</bean>
 	
 	<!-- Step 2 -->
