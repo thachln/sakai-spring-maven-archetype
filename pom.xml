@@ -6,7 +6,7 @@
 
 	<groupId>org.sakaiproject.maven-archetype</groupId>
 	<artifactId>sakai-gencode-adv</artifactId>
-	<version>23.2</version>
+	<version>25.0</version>
 	<packaging>maven-archetype</packaging>
 
 	<name>sakai-gencode-adv</name>
@@ -16,20 +16,15 @@
 			<extension>
 				<groupId>org.apache.maven.archetype</groupId>
 				<artifactId>archetype-packaging</artifactId>
-				<version>3.2.1</version>
+				<version>3.3.1</version>
 			</extension>
-			<!--       <extension> -->
-			<!--         <groupId>org.apache.maven.wagon</groupId> -->
-			<!--         <artifactId>wagon-ssh-external</artifactId> -->
-			<!--         <version>2.12</version> -->
-			<!--       </extension> -->
 		</extensions>
 		<pluginManagement>
 			<plugins>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-archetype-plugin</artifactId>
-					<version>3.2.1</version>
+					<version>3.3.1</version>
 <!--					<configuration>-->
 <!--						<properties>-->
 <!--							<escapeTool>true</escapeTool>-->

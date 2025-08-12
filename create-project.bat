@@ -1,3 +1,2 @@
 @ECHO OFF
-REM mvn archetype:generate -DarchetypeGroupId=org.sakaiproject.maven-archetype -DarchetypeArtifactId=sakai-gencode-adv -DarchetypeVersion=23.2 -Dversion=23.2
-mvn archetype:generate -DarchetypeGroupId=org.sakaiproject.maven-archetype -DarchetypeArtifactId=sakai-gencode-adv -DarchetypeVersion=23.2 -Dversion=23.2 -DdriverClassName=driverClassName@javax.sql.BaseDataSource -Durl=url@javax.sql.BaseDataSource -Dusername=username@javax.sql.BaseDataSource -Dpassword=password@javax.sql.BaseDataSource
+mvn archetype:generate -DarchetypeGroupId=org.sakaiproject.maven-archetype -DarchetypeArtifactId=sakai-gencode-adv -DarchetypeVersion=25.0 -Dversion=25.0 -DdriverClassName=driverClassName@javax.sql.BaseDataSource -Durl=url@javax.sql.BaseDataSource -Dusername=username@javax.sql.BaseDataSource -Dpassword=password@javax.sql.BaseDataSource
