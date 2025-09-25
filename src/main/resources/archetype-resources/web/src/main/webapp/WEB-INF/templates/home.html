@@ -7,7 +7,8 @@
 </head>
 <body>
 
-    <div th:replace="~{fragments/header :: header}">Header</div>
+<!--     <div th:replace="~{fragments/header :: header}">Header</div> -->
+    <th:block th:include="fragments/hnav"></th:block>
     <div class="container">
         <div class="text-center">
             <div class="lead">
@@ -17,10 +18,10 @@
 			<p>Login userId: <span th:text="${session.userDisplayName}"></span></p>
 			<p>Login Display Username: <span th:text="${session.userEid}"></span></p>
             <p>
-                <a id="signup" class="btn btn-success btn-lg">Sign up</a>
+                <a id="signup" class="btn btn-info" role="button" href="https://myworkspace.vn/portal/site/intern-java">Sign up</a>
             </p>
         </div>
-        <div th:insert="~{fragments/footer :: footer}">&copy; 2025 The MKS Group</div>
+        <div th:insert="~{fragments/footer :: footer}"></div>
     </div>
 
 </body>
