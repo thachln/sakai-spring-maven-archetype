@@ -52,31 +52,38 @@
         <sakai.poi.version>5.4.1</sakai.poi.version>
 	</properties>
 
-	<repositories>
-		<repository>
-			<id>sakai-maven</id>
-			<name>Sakai Maven Repo</name>
-			<layout>default</layout>
-			<url>http://source.sakaiproject.org/maven2</url>
-			<releases>
-			</releases>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-		</repository>
-	</repositories>
+<!--	<repositories>-->
+<!--		<repository>-->
+<!--			<id>sakai-maven</id>-->
+<!--			<name>Sakai Maven Repo</name>-->
+<!--			<layout>default</layout>-->
+<!--			<url>http://source.sakaiproject.org/maven2</url>-->
+<!--			<releases>-->
+<!--			</releases>-->
+<!--			<snapshots>-->
+<!--				<enabled>false</enabled>-->
+<!--			</snapshots>-->
+<!--		</repository>-->
+<!--	</repositories>-->
 
-	<pluginRepositories>
-		<pluginRepository>
-			<id>Sakai Plugin Repo</id>
-			<url>http://source.sakaiproject.org/maven2</url>
-			<releases>
-			</releases>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-		</pluginRepository>
-	</pluginRepositories>
+<!--	<pluginRepositories>-->
+<!--		<pluginRepository>-->
+<!--			<id>Sakai Plugin Repo</id>-->
+<!--			<url>http://source.sakaiproject.org/maven2</url>-->
+<!--			<releases>-->
+<!--			</releases>-->
+<!--			<snapshots>-->
+<!--				<enabled>false</enabled>-->
+<!--			</snapshots>-->
+<!--		</pluginRepository>-->
+<!--	</pluginRepositories>-->
+
+	<repositories>
+	  <repository>
+	    <id>xmyworkspace-repo</id>
+	    <url>https://xmyworkspace.com/maven</url>
+	  </repository>
+	</repositories>
 
 
   <modules>
